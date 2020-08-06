@@ -114,6 +114,7 @@ const TeacherForm: React.FC = () => {
 
           <Input 
             required
+            placeholder="Ex: 55 (1) 00000-0000"
             minLength={13}
             maxLength={13}
             type='number'
