@@ -58,22 +58,27 @@ const TeacherForm: React.FC = () => {
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault()
+    if (whatsapp.length < 13 || whatsapp.length > 13) {
+      alert('Número de telefone incompátivel')
+    } else {
+      api.post('classes', {
+        name,
+        avatar,
+        whatsapp,
+        bio,
+        subject,
+        cost: Number(cost),
+        schedule: scheduleItems
+      }).then(() => {
+        alert('Cadastro realizado com sucesso"')
+  
+        history.push('/')
+      }).catch(() => {
+        alert('Erro no cadastro!')
+      })
+    }
 
-    api.post('classes', {
-      name,
-      avatar,
-      whatsapp,
-      bio,
-      subject,
-      cost: Number(cost),
-      schedule: scheduleItems
-    }).then(() => {
-      alert('Cadastro realizado com sucesso"')
-
-      history.push('/')
-    }).catch(() => {
-      alert('Erro no cadastro!')
-    })
+    
 
   }
 
@@ -92,6 +97,7 @@ const TeacherForm: React.FC = () => {
         <legend>Seus dados</legend>
 
           <Input 
+            required
             name="name" 
             label="Nome completo" 
             value={name} 
@@ -99,6 +105,7 @@ const TeacherForm: React.FC = () => {
           />
 
           <Input 
+            required
             name="avatar" 
             label="Avatar" 
             value={avatar} 
@@ -106,6 +113,10 @@ const TeacherForm: React.FC = () => {
           />
 
           <Input 
+            required
+            minLength={13}
+            maxLength={13}
+            type='number'
             name="whatsapp" 
             label="Whatsapp" 
             value={whatsapp} 
@@ -113,6 +124,7 @@ const TeacherForm: React.FC = () => {
           />
 
           <Textarea 
+            required
             name="bio" 
             label="Biografia" 
             value={bio} 
@@ -123,8 +135,8 @@ const TeacherForm: React.FC = () => {
 
       <fieldset>
         <legend>Sobre a aula</legend>
-
         <Select 
+          required
           name="subject" 
           label="Matéria"
           value={subject}
@@ -144,6 +156,8 @@ const TeacherForm: React.FC = () => {
            />
 
         <Input 
+          required
+          type='number'
           name="cost" 
           label="Custo da sua hora por aula" 
           value={cost}
@@ -181,6 +195,7 @@ const TeacherForm: React.FC = () => {
                   />
 
                 <Input 
+                  required
                   name="from" 
                   label='Das' 
                   type='time'
@@ -189,6 +204,7 @@ const TeacherForm: React.FC = () => {
                 />
                   
                 <Input 
+                  required
                   name="to" 
                   label='Até' 
                   type='time'
