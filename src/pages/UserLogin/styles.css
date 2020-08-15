@@ -1,0 +1,205 @@
+.login-container {
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bd-container {
+    background: #8257E5;
+    background-image: url('../../assets/images/success-background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.form-login {
+    background: #F0F0F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.login-container main {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.login-container main form {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-container main form fieldset legend {
+    font-size: 3rem;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #32264D;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.login-container main form fieldset, .login-container main form fieldset input {
+    border: 0;
+    padding: 0 2.4rem;
+    border-radius: 8px;
+    outline: 0;
+}
+
+
+.login-container fieldset + fieldset {
+    margin-top: 6.4rem;
+}
+
+.login-container main form fieldset input.email-input {
+    border: 1px solid #E6E6F0;
+    width: 40rem;
+    height: 72px;
+    border-radius: 8px 8px 0 0;
+    background-color: #FAFAFC;
+
+}
+
+.login-container main form fieldset section {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E6E6F0;
+    background-color: #FAFAFC;
+    width: 40rem;
+    height: 72px;
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.login-container main form fieldset section input {
+    background-color: transparent;
+}
+
+.login-container main form fieldset section button.eye-button {
+    outline: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+
+.login-container main form fieldset section button img.eye-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: 400ms;
+}
+
+
+.login-container main form .button-submit {
+    background: #04D361;
+
+    width: 100%;
+    height: 56px;
+
+    margin-top: 40px;
+
+    border: 0;
+    border-radius: 8px;
+    color: var(--color-title-in-primary);
+    font: 700 1.6rem Archivo;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.login-container main form .button-submit:hover {
+    background: var(--color-secundary-dark);
+}
+
+.login-container main footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 15rem;
+}
+
+.login-container main footer p:first-of-type {
+    max-width: 16rem;
+    text-align: left;
+}
+
+.login-container main footer  p {
+    color: #6A6180;
+    font-family: Poppins;
+
+}
+.login-container main footer p span {
+    color: #8257E5;
+}
+
+.loading {
+    position: absolute;
+    align-self: center;
+}
+
+@media (max-width: 842px) {
+    .login-container {
+        width: 130%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .bd-container {
+        background: #8257E5;
+        background-image: url('../../assets/images/success-background.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130%;
+        height: 100vh;
+    }
+
+    .bd-container img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .form-login {
+        width: 100%;
+        padding-bottom: 5rem;
+    }
+
+    .form-login form {
+        max-width: 306px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .form-login form fieldset input, .form-login form fieldset section {
+        max-width: 306px;
+        width: 80%;
+        text-align: left;
+    }
+    
+}

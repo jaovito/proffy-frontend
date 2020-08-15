@@ -1,0 +1,53 @@
+#page-success main {
+    background-image: url('../../assets/images/success-background.svg');
+    background-color: #8257E5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#page-success main img {
+    width: 12rem;
+}
+
+#page-success main h1 {
+    font-family: Archivo;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    line-height: 42px;
+}
+
+#page-success main p {
+    color: #D4C2FF;
+    text-align: center;
+    line-height: 26px;
+    font-family: Poppins;
+}
+
+#page-success main button {
+    outline: 0;
+    border: 0;
+
+    background-color: #04D361;
+    color: #FFF;
+    font-family: Archivo;
+    font-weight: 600;
+
+    border-radius: 8px;
+    margin-top: 10rem;
+
+    padding: 1.8rem 7rem;
+
+    transition: 400ms;
+}
+
+#page-success main button:hover {
+    opacity: 0.8;
+}
+

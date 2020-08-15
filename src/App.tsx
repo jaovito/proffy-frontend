@@ -1,10 +1,13 @@
 import React from 'react';
-import Routes from './routes'
+import IndexRoutes from './Routes/index'
 import './assets/styles/global.css'
+import {AuthProvider} from './contexts/auth'
 
 function App() {
   return (
-    <Routes />
+    <AuthProvider>
+      <IndexRoutes />
+    </AuthProvider>
   );
 }
 
